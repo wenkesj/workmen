@@ -5,29 +5,20 @@ npm i defer-work --save
 ```
 ## API ##
 ```js
-var Baton = require('defer-work');
-var baton = new Baton();
+var Worker = require('defer-work');
+var worker = new Baton();
 ```
-### _baton_.pass(_callback_) ###
-Creates an event loop queue item filled with deferred work. Returns a Promise object after all deferred work from the baton is finished.
+
+### _worker_.open(_workFunction_) ###
+Creates an event loop filled with deferred work.
 ```js
-baton.pass(function() {
-  // ... Deferred work...
-}).then(function() {
-  // ... Finished.
-});
-```
-### _baton_.open(_callback_) ###
-```js
-baton.open(function() {
-  // ... Do something with this event loop forever.
+worker.open(function() {
+  // ... Do something with this event loop.
 });
 ```
 
-### _baton_.defer() ###
+### _worker_.defer() ###
+Stop all work on a worker.
 ```js
-baton.open(function() {
-  // ... Run this event loop once.
-  this.defer();
-});
+worker.defer();
 ```
