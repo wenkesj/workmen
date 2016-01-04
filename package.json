@@ -1,0 +1,11 @@
+{
+  "name": "defer-work",
+  "version": "1.0.0",
+  "description": "Maintainable deferred work for Node.js.",
+  "main": "addon.js",
+  "gypfile": true,
+  "dependencies": {
+    "bindings": "~1.2.1",
+    "nan": "^2.0.0"
+  }
+}
