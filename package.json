@@ -1,6 +1,6 @@
 {
   "name": "defer-work",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Maintainable deferred work for Node.js.",
   "main": "addon.js",
   "gypfile": true,

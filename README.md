@@ -6,7 +6,7 @@ npm i defer-work --save
 ## API ##
 ```js
 var Worker = require('defer-work');
-var worker = new Baton();
+var worker = new Worker();
 ```
 
 ### _worker_.open(_workFunction_) ###
