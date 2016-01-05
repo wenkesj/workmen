@@ -1,5 +1,5 @@
 # workmen #
-Maintainable deferred work for **Node.js**.
+Maintainable async work for **Node.js**.
 ```sh
 npm i workmen --save
 ```
