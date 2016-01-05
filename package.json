@@ -1,6 +1,6 @@
 {
   "name": "workmen",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Maintainable async workers for Node.js.",
   "main": "addon.js",
   "license": "MIT",
@@ -10,8 +10,12 @@
     "bindings": "~1.2.1",
     "nan": "^2.0.0"
   },
-  "repository" : {
-    "type" : "git",
-    "url" : "https://github.com/wenkesj/workmen.git"
+  "devDependencies": {
+    "socket.io": "^1.3.7",
+    "socket.io-client": "^1.3.7"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wenkesj/workmen.git"
   }
 }

@@ -22,3 +22,8 @@ Stop all work on a worker.
 ```js
 worker.close();
 ```
+
+## Testing ##
+```sh
+node ./test [--verbose]
+```

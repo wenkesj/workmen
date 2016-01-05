@@ -1,23 +1,17 @@
-var Worker = require('../addon');
-var cpus = require("os").cpus().length;
-var workers = [];
-var a = 0;
+var Test = require('./suite');
+var suite = new Test();
+var total = 1000;
 
-function work() {
-  for (var i = 0; i < 100000; i++) {
-    a++;
-  }
-}
-
-/* Spawn some worker batons. */
-for (var i = 0; i < cpus; i++) {
-  workers[i] = new Worker();
-  workers[i].open(work);
-}
-
-setTimeout(function() {
-  for (var i = 0; i < cpus; i++) {
-    workers[i].close(work);
-  }
-  console.log(a);
-}, 1000);
+suite.createEnvironment(function(workers, worker) {
+  suite.connectClient(worker, function(client) {
+    suite.log('Worker ' + worker.id + ' client connection established');
+    for (var i = 0; i < total; i++) {
+      var message = 'Message ' + (i + 1) + ' of ' + total ;
+      client.emit('message', {
+        worker: worker,
+        message: message
+      });
+    }
+    suite.log('Worker ' + worker.id + ' done', true);
+  });
+});
