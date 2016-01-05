@@ -20,5 +20,5 @@ worker.open(function() {
 ### _worker_.close() ###
 Stop all work on a worker.
 ```js
-worker.defer();
+worker.close();
 ```
