@@ -1,2 +1,2 @@
-var Worker = require('bindings')('addon').Baton;
+var Worker = require('bindings')('addon').Worker;
 module.exports = Worker;

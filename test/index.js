@@ -17,7 +17,7 @@ for (var i = 0; i < cpus; i++) {
 
 setTimeout(function() {
   for (var i = 0; i < cpus; i++) {
-    workers[i].defer(work);
+    workers[i].close(work);
   }
   console.log(a);
 }, 1000);
